@@ -47,6 +47,21 @@ export OPENAI_API_KEY=sk-...
 
 Edit `kata.md` to describe the problem you want the agents to solve.
 
+### Available Katas
+
+We have provided a few katas in the `katas/` directory to get you started:
+- `katas/bowling.md`
+- `katas/fizzbuzz.md`
+- `katas/string-calculator.md`
+- `katas/mars-rover-kata.md`
+- `katas/battleships-kata.md`
+
+To use one, simply copy it to your `kata.md`:
+
+```bash
+cp ../katas/bowling.md kata.md
+```
+
 ### 3. Run
 
 ```bash
