@@ -40,6 +40,18 @@
   - Add guidance on when to extract to separate files
   - Update JSON schema to support multiple file edits in one step
 
+### Kata Constraints & Requirements
+- [ ] Update all role prompts to properly read and follow kata constraints
+  - Emphasize reading the entire kata description carefully
+  - Explicitly instruct agents to follow any constraints mentioned (e.g., "each function <= 5 LOC")
+  - Add examples of common kata constraints:
+    - Function length limits
+    - No loops/only recursion
+    - Specific design patterns required
+    - Performance requirements
+  - Ensure constraints are checked during verification
+  - Add validation that code adheres to stated constraints
+
 ## Medium Priority
 
 ### Configuration Enhancements
