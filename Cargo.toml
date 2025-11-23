@@ -1,0 +1,10 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/tdd-cli",
+    "crates/tdd-core",
+    "crates/tdd-agents",
+    "crates/tdd-exec",
+    "crates/tdd-llm",
+    "crates/tdd-fixtures",
+]

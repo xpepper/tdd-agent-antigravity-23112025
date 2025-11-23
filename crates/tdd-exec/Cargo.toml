@@ -1,0 +1,15 @@
+[package]
+name = "tdd-exec"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tdd-core = { path = "../tdd-core" }
+anyhow = "1.0"
+async-trait = "0.1"
+thiserror = "1.0"
+tokio = { version = "1.0", features = ["process", "io-util"] }
+git2 = "0.18"
+tempfile = "3.8"
+walkdir = "2.4"
+ignore = "0.4"
