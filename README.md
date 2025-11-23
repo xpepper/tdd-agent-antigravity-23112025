@@ -56,11 +56,17 @@ We have provided a few katas in the `katas/` directory to get you started:
 - `katas/mars-rover-kata.md`
 - `katas/battleships-kata.md`
 
-To use one, simply copy it to your `kata.md`:
+To use one, you can either:
 
-```bash
-cp ../katas/bowling.md kata.md
-```
+1. Copy it to your `kata.md`:
+   ```bash
+   cp ../katas/bowling.md kata.md
+   ```
+
+2. Or update `tdd.yaml` to point to it directly:
+   ```yaml
+   kata_description: "../katas/bowling.md"
+   ```
 
 ### 3. Run
 
