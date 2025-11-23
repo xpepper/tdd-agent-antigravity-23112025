@@ -72,6 +72,24 @@ The `sonar-pro` model also violated TDD discipline:
 
 **Conclusion:** Both `sonar` and `sonar-pro` models are not suitable for this strict role-based TDD workflow.
 
+### Strengthened Prompts Testing (2025-11-23)
+**Action:** Significantly strengthened all role prompts with explicit constraints:
+- Tester: "You are FORBIDDEN from writing ANY production code"
+- Tester: "ONLY write test code"
+- Tester: "If the test passes, you have violated your role"
+- Added RED/GREEN/REFACTOR phase labels
+- Multiple warnings and constraints
+
+**Result:** ❌ No improvement
+
+Even with extremely explicit constraints, `sonar-pro` still:
+- Wrote `Heading` enum with `turn_left` and `turn_right` implementations
+- Wrote `Rover` struct with `new` constructor
+- Wrote tests that pass because implementations were included
+- Violated TDD discipline in all 5 retry attempts
+
+**Conclusion:** The Perplexity models (both `sonar` and `sonar-pro`) are fundamentally not suitable for strict role-based multi-agent workflows, regardless of prompt engineering efforts.
+
 ## Recommendation
 Use LLMs with better instruction-following capabilities:
 - OpenAI GPT-4 / GPT-4o
@@ -80,3 +98,10 @@ Use LLMs with better instruction-following capabilities:
 - DeepSeek Coder
 
 These models have demonstrated better adherence to system prompts and role constraints in similar multi-agent workflows.
+
+## Positive Outcomes
+While Perplexity models don't work for this use case, the prompt strengthening exercise resulted in:
+- ✅ Much clearer role definitions with RED/GREEN/REFACTOR phase labels
+- ✅ Explicit constraints that will help ANY LLM follow TDD discipline better
+- ✅ Better documentation of what each role can and cannot do
+- ✅ These improved prompts are now committed and ready for use with better LLMs
